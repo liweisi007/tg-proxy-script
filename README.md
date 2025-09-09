@@ -14,10 +14,10 @@
 
 使用 **curl**：
 ```bash
-bash <(curl -sL https://raw.githubusercontent.com/你的用户名/tg-proxy-script/main/install.sh)
+bash <(curl -sL https://raw.githubusercontent.com/liweisi007/tg-proxy-script/main/install.sh)
 使用 wget：
 
-bash <(wget -qO- https://raw.githubusercontent.com/你的用户名/tg-proxy-script/main/install.sh)
+bash <(wget -qO- https://raw.githubusercontent.com/liweisi007/tg-proxy-script/main/install.sh)
 
 📋 菜单示例
 
@@ -36,3 +36,4 @@ bash <(wget -qO- https://raw.githubusercontent.com/你的用户名/tg-proxy-scri
 📖 许可证
 
 本项目基于 MIT License 开源。
+
