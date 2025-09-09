@@ -1,7 +1,7 @@
 #!/bin/bash
-# Telegram Proxy 一键管理脚本 (Unix LF 换行)
-# 功能：安装 / 卸载 / 查看状态
-# 支持安装时自定义端口
+# Telegram Proxy 一键管理脚本 (Unix LF, 无 BOM)
+# 支持安装 / 卸载 / 查看状态
+# 安装时可自定义端口
 
 install_proxy() {
     echo "==========================="
@@ -26,8 +26,8 @@ install_proxy() {
         -p ${port}:443 \
         telegrammessenger/proxy:latest
 
-    echo "代理已安装并运行在端口 ${port}"
-    echo "连接方式：tg://proxy?server=$(curl -s ifconfig.me)&port=${port}&secret=生成的密钥"
+    echo "✅ 代理已安装并运行在端口 ${port}"
+    echo "🔗 连接方式：tg://proxy?server=$(curl -s ifconfig.me)&port=${port}&secret=生成的密钥"
 }
 
 uninstall_proxy() {
@@ -35,7 +35,7 @@ uninstall_proxy() {
     echo "   卸载 Telegram 代理"
     echo "==========================="
     docker rm -f tg-proxy >/dev/null 2>&1
-    echo "代理已卸载完成。"
+    echo "✅ 代理已卸载完成。"
 }
 
 status_proxy() {
@@ -66,7 +66,7 @@ show_menu() {
         2) uninstall_proxy ;;
         3) status_proxy ;;
         0) exit 0 ;;
-        *) echo "无效选择，请重试。" ; sleep 2 ;;
+        *) echo "❌ 无效选择，请重试。" ; sleep 2 ;;
     esac
 }
 
